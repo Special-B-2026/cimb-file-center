@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team File Center</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-badge">CIMB DS</div>
+
+      <div class="hero-text">
+        <p class="hero-kicker">TEAM DOCUMENT CENTER</p>
+        <h1>ศูนย์ดาวน์โหลดเอกสารของทีม</h1>
+        <p class="hero-subtitle">
+          ค้นหาและดาวน์โหลดไฟล์ PDF กับ Excel ได้จากหน้าเดียว
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">✦</div>
+        <div class="stat-content">
+          <span class="stat-label">ไฟล์ทั้งหมด</span>
+          <strong id="totalCount" class="stat-value">0</strong>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon pdf-icon">PDF</div>
+        <div class="stat-content">
+          <span class="stat-label">เอกสาร PDF</span>
+          <strong id="pdfCount" class="stat-value">0</strong>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon excel-icon">XLS</div>
+        <div class="stat-content">
+          <span class="stat-label">ไฟล์ Excel</span>
+          <strong id="excelCount" class="stat-value">0</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="toolbar">
+      <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input id="searchInput" type="text" placeholder="ค้นหาจากชื่อไฟล์..." />
+      </div>
+
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+        <button class="filter-btn" data-filter="pdf">PDF</button>
+        <button class="filter-btn" data-filter="excel">Excel</button>
+      </div>
+    </section>
+
+    <section id="pdfSection" class="file-section">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker section-kicker-pdf">PDF DOCUMENTS</span>
+          <h2>เอกสาร PDF</h2>
+        </div>
+        <span id="pdfSectionCount" class="section-count">0 ไฟล์</span>
+      </div>
+
+      <div id="pdfGrid" class="file-grid"></div>
+    </section>
+
+    <section id="excelSection" class="file-section">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker section-kicker-excel">EXCEL FILES</span>
+          <h2>ไฟล์ Excel</h2>
+        </div>
+        <span id="excelSectionCount" class="section-count">0 ไฟล์</span>
+      </div>
+
+      <div id="excelGrid" class="file-grid"></div>
+    </section>
+
+    <section id="emptyState" class="empty-state hidden">
+      <div class="empty-state-icon">🔎</div>
+      <h2>ไม่พบเอกสารที่ค้นหา</h2>
+      <p>ลองพิมพ์ชื่อไฟล์ใหม่ หรือเปลี่ยนตัวกรองด้านบน</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Team File Center</p>
+      <p>เอกสารภายในทีม</p>
+    </div>
+  </footer>
+
+  <script src="files-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
